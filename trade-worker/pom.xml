@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.batch.sample</groupId>
+    <artifactId>batch-process-sample</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>trade-worker</artifactId>
+  <name>trade-worker</name>
+  <description>trade-worker</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.batch</groupId>
+      <artifactId>batch-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.batch</groupId>
+      <artifactId>message-config</artifactId>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.batch</groupId>
+      <artifactId>common-utils</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.batch</groupId>
+      <artifactId>worker-service</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.batch</groupId>
+      <artifactId>batch-config</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.batch.sample</groupId>
+      <artifactId>common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.batch.sample</groupId>
+      <artifactId>trade-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.batch.sample</groupId>
+      <artifactId>sample-config</artifactId>
+    </dependency>
+  </dependencies>
+</project>

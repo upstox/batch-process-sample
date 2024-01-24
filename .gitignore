@@ -1,0 +1,13 @@
+*/target/*
+*/target/**
+.idea
+*.iml
+/target
+.settings/
+.project
+.classpath
+.factorypath
+.DS_Store
+.gradle
+state
+MANIFEST.MF

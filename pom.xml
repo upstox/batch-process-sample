@@ -1,0 +1,154 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.batch.sample</groupId>
+  <artifactId>batch-process-sample</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>batch-process-sample</name>
+  <description>batch-process-sample</description>
+  <modules>
+    <module>sample-common</module>
+    <module>sample-config</module>
+    <module>sample-dataservice</module>
+    <module>sample-manager-server</module>
+    <module>sample-worker-server</module>
+    <module>trade-common</module>
+    <module>trade-dataservice</module>
+    <module>trade-worker</module>
+    <module>sample-worker</module>
+    <module>common</module>
+  </modules>
+
+  <properties>
+
+    <!-- Version overrides for libraries coming from parent and root pom -->
+    <batch-process-framework-version>0.0.1-SNAPSHOT</batch-process-framework-version>
+    <hibernate-validator-version>6.2.0.Final</hibernate-validator-version>
+    <hibernate-validator-annotation-processor-version>6.2.0.Final</hibernate-validator-annotation-processor-version>
+    <javax.el-api-version>3.0.0</javax.el-api-version>
+    <javax.el-version>2.2.6</javax.el-version>
+
+    <lombok.version>1.18.20</lombok.version>
+
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+  </properties>
+
+  <dependencyManagement>
+
+    <dependencies>
+
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>common-utils</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>batch-config</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>batch-common</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>data-service</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>message-config</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>batch-job-manager</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch</groupId>
+        <artifactId>worker-service</artifactId>
+        <version>${batch-process-framework-version}</version>
+      </dependency>
+
+      <!-- Sample Implementation -->
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-config</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-dataservice</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-worker</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>trade-common</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>trade-dataservice</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>trade-worker</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-manager-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.batch.sample</groupId>
+        <artifactId>sample-worker-server</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+      </dependency>
+
+    </dependencies>
+
+  </dependencyManagement>
+  <profiles>
+    <profile>
+      <id>uat</id>
+    </profile>
+    <profile>
+      <id>prod</id>
+    </profile>
+    <profile>
+      <id>dev</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+    </profile>
+  </profiles>
+</project>

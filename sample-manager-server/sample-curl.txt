@@ -1,0 +1,5 @@
+curl --location --request POST 'localhost:60000/process' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "jobType":"process-trade"
+}'
